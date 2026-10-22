@@ -1,0 +1,19 @@
+model,question,run,status,sec,in_tok,out_tok,thought_tok,out_tok_per_sec
+gemini-3.5-flash-lite,short,1,ok,4.46,14,51,0,11.4
+gemini-3.5-flash-lite,short,2,ok,3.1,14,56,0,18.0
+gemini-3.5-flash-lite,short,3,ok,0.73,14,49,0,67.3
+gemini-3.5-flash-lite,long,1,ok,6.97,7,708,0,101.6
+gemini-3.5-flash-lite,long,2,ok,4.47,7,572,0,127.9
+gemini-3.5-flash-lite,long,3,ok,6.39,7,617,0,96.5
+gemini-3.5-flash-lite,course,1,ok,3.17,21,605,0,190.6
+gemini-3.5-flash-lite,course,2,ok,2.83,21,635,0,224.2
+gemini-3.5-flash-lite,course,3,ok,14.88,21,584,0,39.2
+gemini-3.8-flash,short,1,error 429,0.23,,,,
+gemini-3.8-flash,short,2,error 429,0.3,,,,
+gemini-3.8-flash,short,3,error 429,0.22,,,,
+gemini-3.8-flash,long,1,error 429,0.22,,,,
+gemini-3.8-flash,long,2,error 429,0.2,,,,
+gemini-3.8-flash,long,3,error 429,0.25,,,,
+gemini-3.8-flash,course,1,error 429,0.26,,,,
+gemini-3.8-flash,course,2,error 429,0.23,,,,
+gemini-3.8-flash,course,3,error 429,0.3,,,,
