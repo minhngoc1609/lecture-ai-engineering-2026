@@ -1,0 +1,76 @@
+{
+  "config": {
+    "base_model": "Qwen/Qwen3.5-0.8B",
+    "revision": "2fc06364715b967f1860aea9cf38778875588b17",
+    "seed": 42,
+    "num_train_epochs": 20,
+    "warmup_steps": 6,
+    "lr": 0.0002,
+    "lora_r": 16,
+    "lora_alpha": 32,
+    "max_seq_len": 512,
+    "max_new_tokens": 96,
+    "gen": {
+      "do_sample": false
+    }
+  },
+  "versions": {
+    "transformers": "5.18.0",
+    "peft": "0.21.1",
+    "trl": "1.14.2",
+    "torch": "2.11.0+cu130"
+  },
+  "method": "LoRA（量子化なし）",
+  "before": {
+    "label": "before",
+    "n": 21,
+    "format_rate": 1.0,
+    "content_rate": 0.23809523809523808,
+    "both_rate": 0.23809523809523808,
+    "seconds": 53.5
+  },
+  "after": {
+    "label": "after",
+    "n": 21,
+    "format_rate": 1.0,
+    "content_rate": 0.6190476190476191,
+    "both_rate": 0.6190476190476191,
+    "seconds": 35.0
+  },
+  "regressed": [],
+  "knowledge": [
+    {
+      "質問": "What are the OTC desk's business hours?",
+      "FAQ にある": false,
+      "学習前の分類": "needs_review",
+      "学習前の出力": "{\"answer\": \"The provided FAQ does not contain information regarding the OTC desk's business hours.\", \"needs_review\": true}",
+      "学習後の分類": "needs_review",
+      "学習後の出力": "{\"answer\": \"This FAQ does not cover this. Please confirm with the OTC desk.\", \"needs_review\": true}"
+    },
+    {
+      "質問": "Is there a daily limit on the number of OTC trades?",
+      "FAQ にある": false,
+      "学習前の分類": "needs_review",
+      "学習前の出力": "{\"answer\": \"No\", \"needs_review\": true}",
+      "学習後の分類": "needs_review",
+      "学習後の出力": "{\"answer\": \"This FAQ does not cover this. Please confirm with the OTC desk.\", \"needs_review\": true}"
+    },
+    {
+      "質問": "Can I pay for an OTC trade with a credit card?",
+      "FAQ にある": false,
+      "学習前の分類": "needs_review",
+      "学習前の出力": "{\"answer\": \"No, there are no fees to trade Spot OTC, but there is no maximum trade size, and trades are settled directly to the Binance Spot Account you specify (master or sub-account), typically immediately after the trade.\", \"needs_review\": true}",
+      "学習後の分類": "needs_review",
+      "学習後の出力": "{\"answer\": \"This FAQ does not cover this. Please confirm with the OTC desk.\", \"needs_review\": true}"
+    },
+    {
+      "質問": "How much are the OTC trading fees?",
+      "FAQ にある": false,
+      "学習前の分類": "needs_review",
+      "学習前の出力": "{\"answer\": \"There are no fees to trade Spot OTC.\", \"needs_review\": true}",
+      "学習後の分類": "asserted",
+      "学習後の出力": "{\"answer\": \"There are no fees to trade Spot OTC.\", \"needs_review\": false}"
+    }
+  ],
+  "executed_training_myself": true
+}
